@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-fondo: #e9e6e6; /* Gris elegante */
+    --color-texto: white;
+    --color-boton: #76A3A4;
+    --color-hover: #9E802E;
+    --ancho-linea: 120px;
+    --color-nombres: #9E802E;
+    --color-negro:#000000;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.hero {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    /* border-radius: 10px; */
+}
+h2{
+    color: var(--color-nombres);
+    font-size: 40px;
+}
+
+.nombres {
+    font-size: 90px;
+  /*   font-weight: bold; */
+  /*   text-transform: uppercase; */
+    margin-top: -10px;
+    color: var(--color-negro);
+    font-family: "Tangerine", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+    
+}
+
+.anillos {
+    width: 180px;
+    height: auto;
+}
+
+.boton-con-lineas {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.linea {
+    width: var(--ancho-linea);
+    height: 2px;
+    background-color: var(--color-nombres);
+}
+
+#playButton {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-boton);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#playButton:hover {
+    background-color: var(--color-hover);
+}
