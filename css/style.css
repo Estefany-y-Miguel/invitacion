@@ -33,11 +33,11 @@ body {
 }
 h2{
     color: var(--color-nombres);
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .nombres {
-    font-size: 90px;
+    font-size: 60px;
   /*   font-weight: bold; */
   /*   text-transform: uppercase; */
     margin-top: -10px;
