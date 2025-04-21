@@ -85,3 +85,57 @@ h2{
 #playButton:hover {
     background-color: var(--color-hover);
 }
+
+/* evento */
+.evento {
+    background-color: var(--color-texto);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+p{
+    color: var(--color-negro);
+}
+
+.fecha {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.ubicacion {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: var(--color-boton);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.ubicacion:hover {
+    background-color: var(--color-hover);
+}
+
+#contador {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color:var(--color-negro);
+}
+
+.tiempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 5px;
+   /*  text-transform: uppercase; */
+}
