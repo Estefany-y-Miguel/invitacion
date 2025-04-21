@@ -94,14 +94,22 @@ h2{
     padding: 40px;
     border-radius: 10px;
 }
+.info{
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 p{
     color: var(--color-negro);
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .fecha {
     font-size: 28px;
-    font-weight: bold;
+   
 }
 
 .ubicacion {
