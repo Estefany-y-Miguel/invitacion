@@ -164,3 +164,35 @@ p{
    color: var(--color-nombres);
 }
 
+/* Estilos itinerario */
+.itinerario {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.foto-novios {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.titulo-itinerario {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.direccion, .vestimenta {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.negrita {
+    font-weight: bold;
+}
