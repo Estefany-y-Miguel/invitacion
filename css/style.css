@@ -240,7 +240,7 @@ p{
 }
 
 .titulo-bendicion {
-    font-size: 40px;
+    font-size: 26px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -267,6 +267,10 @@ p{
     border-radius: 50%; /* Hace que las fotos sean circulares */
     border: 3px solid var(--color-linea); /* Borde elegante */
     margin-bottom: 10px;
+}
+
+.nom-papas{
+    color: var(--color-negro);
 }
 
 .foto-circulo h3 {
