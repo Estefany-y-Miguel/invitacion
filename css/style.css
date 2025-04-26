@@ -222,3 +222,55 @@ p{
 .caja .hora{
     font-size: 30px;
 }
+
+/* estilos_Bendicion */
+.bendicion {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--color-fondo); /* Personaliza el fondo */
+    color: var(--color-texto);
+}
+
+.linea-divisora {
+    border: none;
+    height: 2px;
+    background-color: var(--color-nombres); /* Color de la línea divisora */
+    margin: 20px auto;
+    width: 50%; /* Ajusta el ancho de la línea */
+}
+
+.titulo-bendicion {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mensaje-bendicion {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.fotos-circulares {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los círculos */
+    flex-wrap: wrap; /* Para adaptar en dispositivos pequeños */
+}
+
+.foto-circulo {
+    text-align: center;
+}
+
+.foto-circulo img {
+    width: 180px;/* 12opx */
+    height: 180px;/* 120px */
+    border-radius: 50%; /* Hace que las fotos sean circulares */
+    border: 3px solid var(--color-linea); /* Borde elegante */
+    margin-bottom: 10px;
+}
+
+.foto-circulo h3 {
+    font-size: 18px;
+    margin-top: 5px;
+    color: var(--color-nombres);
+}
