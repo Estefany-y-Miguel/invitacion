@@ -35,3 +35,46 @@ function actualizarContador() {
 
 actualizarContador();
 
+/* Datos Bancarios */
+
+// Selecciona el contenedor donde se añadirán los datos
+const datosContainer = document.getElementById("datos-bancarios-container");
+
+// Crea el botón principal
+const botonDatos = document.createElement("button");
+botonDatos.className = "boton-datos-bancarios";
+botonDatos.innerHTML = '<img src="./img/banco.png" alt="Icono banco" class="icono-banco"> Ver Datos Bancarios';
+
+// Variable para rastrear si los datos están visibles
+let datosVisibles = false;
+
+// Evento para mostrar/ocultar los datos bancarios
+botonDatos.addEventListener("click", () => {
+    if (!datosVisibles) {
+        // Crea el contenido de los datos bancarios
+        const datosBancarios = document.createElement("div");
+        datosBancarios.id = "datos-bancarios";
+        datosBancarios.innerHTML = `
+            <p><strong>BANCO:</strong> XXXXXXXXXXX</p>
+            <p><strong>Nº DE CUENTA:</strong> XXXXXXXX</p>
+            <p><strong>CUENTA CLABE:</strong> XXXXXXXX</p>
+            <p><strong>TITULAR:</strong> XXXXXXXXXX</p>
+            <button id="cerrar-datos" class="cerrar-datos">X</button>
+        `;
+        datosContainer.appendChild(datosBancarios);
+        datosVisibles = true;
+
+        // Agrega funcionalidad para cerrar con la "X"
+        document.getElementById("cerrar-datos").addEventListener("click", () => {
+            datosBancarios.remove();
+            datosVisibles = false;
+        });
+    } else {
+        // Si ya están visibles, los ocultamos
+        document.getElementById("datos-bancarios").remove();
+        datosVisibles = false;
+    }
+});
+
+// Agrega el botón principal al contenedor
+datosContainer.appendChild(botonDatos);
