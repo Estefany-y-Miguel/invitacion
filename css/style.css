@@ -285,18 +285,18 @@ p{
 .regalos {
     text-align: center;
     padding: 40px;
-    background-color: var(--color-fondo-regalos); /* Personaliza el fondo */
+    background-color: var(--color-fondo); /* Personaliza el fondo */
     color: var(--color-texto);
 }
 
 .titulo-regalos {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .mensaje-regalos {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -347,8 +347,9 @@ p{
 
 /* datos bancarios */
 .datos-bancarios {
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
+    background-color:var(--color-fondo);  /* color bancario */
 }
 
 .boton-datos-bancarios {
@@ -365,6 +366,7 @@ p{
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 .icono-banco {
@@ -396,4 +398,73 @@ p{
     font-size: 14px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+
+/* confirmar asistencia */
+
+.confirmar-asistencia {
+    text-align: center;
+    padding: 40px;
+    /* background-color: var(--color-fondo); /* Personaliza el color de fondo */ */
+    color: var(--color-texto);
+}
+
+.titulo-confirmar {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mensaje-confirmar {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.titulo-contacto {
+    font-size: 40px;
+    color: var(--color-nombres);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.botones-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre botones */
+    flex-wrap: wrap;
+}
+
+.boton-contacto {
+    background-color: var(--color-boton);
+    color: var(--color-negro);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre ícono y texto */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icono-whatsapp {
+    width: 20px;
+    height: 20px;
+    color: var(--color-fondo);
+}
+
+
+/* boton whatsapp Estilo responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .botones-contacto {
+        flex-direction: column; /* Coloca los botones en una columna */
+        align-items: center; /* Centra los botones */
+        gap: 15px; /* Ajusta el espaciado entre ellos */
+    }
+
+    .boton-contacto {
+        width: 80%; /* Ajusta el ancho del botón para pantallas pequeñas */
+    }
 }

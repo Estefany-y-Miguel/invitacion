@@ -78,3 +78,18 @@ botonDatos.addEventListener("click", () => {
 
 // Agrega el botón principal al contenedor
 datosContainer.appendChild(botonDatos);
+
+
+/* confirmar asistencia */
+
+// Botón confirmar con Estefany
+document.getElementById("confirmar-estefany").addEventListener("click", () => {
+    const mensaje = encodeURIComponent("¡Hola, Estefany! Confirmo mi asistencia a la boda. Muchas gracias por la invitación.");
+    window.open(`https://wa.me/525500000000?text=${mensaje}`, "_blank");
+});
+
+// Botón confirmar con Miguel
+document.getElementById("confirmar-miguel").addEventListener("click", () => {
+    const mensaje = encodeURIComponent("¡Hola, Miguel! Confirmo mi asistencia a la boda. Muchas gracias por la invitación.");
+    window.open(`https://wa.me/525511111111?text=${mensaje}`, "_blank");
+});
