@@ -164,6 +164,50 @@ p{
    color: var(--color-nombres);
 }
 
+
+/* codigo de vestimenta */
+
+.titulo-codigo{
+margin-bottom: 30px;
+}
+
+.codigo-vestimenta {
+    text-align: center;
+   /*  padding: 40px; */
+    background-color: var(--color-fondo); /* Fondo acorde al diseño */
+    border-radius: 10px;
+}
+
+.vestimenta-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Para que se adapte a pantallas pequeñas */
+}
+
+.vestimenta-bloque {
+    text-align: center;
+    max-width: 250px;
+}
+
+.icono-vesti {
+    width: 100px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.descripcion-vestimenta {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-negro);
+}
+
+
+
+
+
+
+
 /* Estilos itinerario */
 .itinerario {
     background-color: var(--color-fondo);
@@ -178,19 +222,19 @@ p{
     max-width: 400px;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .titulo-itinerario {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom:40px;
 }
 
 .direccion, .vestimenta {
     font-size: 22px;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
 
 .negrita {
@@ -213,6 +257,9 @@ p{
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px; /* Espaciado entre el título y el párrafo */
+}
+.icono-vesti{
+    width:120px;
 }
 
 .caja p {
