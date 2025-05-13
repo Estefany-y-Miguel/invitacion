@@ -2,8 +2,10 @@ document.getElementById("playButton").addEventListener("click", function() {
     let music = document.getElementById("music");
     if (music.paused) {
         music.play();
+        this.innerHTML = "⏸"; // Cambia el ícono a pausa
     } else {
         music.pause();
+        this.innerHTML = "▶"; // Cambia el ícono a play
     }
 });
 
@@ -55,10 +57,11 @@ botonDatos.addEventListener("click", () => {
         const datosBancarios = document.createElement("div");
         datosBancarios.id = "datos-bancarios";
         datosBancarios.innerHTML = `
-            <p><strong>BANCO:</strong> XXXXXXXXXXX</p>
-            <p><strong>Nº DE CUENTA:</strong> XXXXXXXX</p>
-            <p><strong>CUENTA CLABE:</strong> XXXXXXXX</p>
-            <p><strong>TITULAR:</strong> XXXXXXXXXX</p>
+            <p><strong>BANCO:</strong> BBVA</p>
+            <p><strong>Nº DE TARJETA:</strong> 4152 3138 7174 5944</p>
+            <p><strong>CUENTA CLABE:</strong> 012 180 01570477547 9</p>
+            <p><strong>TITULAR:</strong> Estefany Escalona</p>
+            <p><strong>CONCEPTO:</strong> Buenos Deseos</p>
             <button id="cerrar-datos" class="cerrar-datos">X</button>
         `;
         datosContainer.appendChild(datosBancarios);
@@ -85,7 +88,7 @@ datosContainer.appendChild(botonDatos);
 // Botón confirmar con Estefany
 document.getElementById("confirmar-estefany").addEventListener("click", () => {
     const mensaje = encodeURIComponent("¡Hola, Estefany! Confirmo mi asistencia a la boda. Muchas gracias por la invitación.");
-    window.open(`https://wa.me/525500000000?text=${mensaje}`, "_blank");
+    window.open(`https://wa.me/525580363354?text=${mensaje}`, "_blank");
 });
 
 // Botón confirmar con Miguel

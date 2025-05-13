@@ -376,6 +376,7 @@ margin-bottom: 30px;
     gap: 10px; /* Espaciado entre icono y texto */
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 /* Estilo responsivo para pantallas pequeñas */
@@ -484,7 +485,7 @@ margin-bottom: 30px;
 
 .boton-contacto {
     background-color: var(--color-boton);
-    color: var(--color-negro);
+    color: var(--color-fondo);
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -494,6 +495,7 @@ margin-bottom: 30px;
     gap: 10px; /* Espacio entre ícono y texto */
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content:center;
 }
 
 .icono-whatsapp {
@@ -515,3 +517,20 @@ margin-bottom: 30px;
         width: 80%; /* Ajusta el ancho del botón para pantallas pequeñas */
     }
 }
+
+/* footer */
+
+.footer {
+    background-color: var(--color-fondo);
+    color: var(--color-negro);
+    text-align: center;
+    padding: 30px;
+    border-top: 2px solid var(--color-nombres);
+}
+
+.logo img {
+    width: 350px; /* Ajusta el tamaño del logo */
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
