@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
  */
 
-const audio = document.getElementById('music');
+/* const audio = document.getElementById('music');
     let haReproducido = false;
 
     function reproducirAlScroll() {
@@ -74,7 +74,24 @@ const audio = document.getElementById('music');
 
     window.addEventListener('scroll', reproducirAlScroll);
 
+ */
 
+    document.addEventListener("DOMContentLoaded", function() {
+    let music = document.getElementById("music");
+    
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && music.paused) {
+                music.play().catch(error => {
+                    console.log("La reproducción automática fue bloqueada por el navegador.");
+                });
+            }
+        });
+    });
+
+    // Observamos el cuerpo de la página o una sección específica
+    observer.observe(document.querySelector("body"));
+});
 
 
 /* contador */
