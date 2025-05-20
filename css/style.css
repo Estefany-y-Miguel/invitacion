@@ -456,7 +456,7 @@ margin-bottom: 30px;
 .confirmar-asistencia {
     text-align: center;
     padding: 40px;
-    /* background-color: var(--color-fondo); /* Personaliza el color de fondo */ */
+    /* background-color: var(--color-fondo); /* Personaliza el color de fondo */ 
     color: var(--color-texto);
 }
 

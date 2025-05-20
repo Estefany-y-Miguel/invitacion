@@ -141,5 +141,5 @@ document.getElementById("confirmar-estefany").addEventListener("click", () => {
 // Botón confirmar con Miguel
 document.getElementById("confirmar-miguel").addEventListener("click", () => {
     const mensaje = encodeURIComponent("¡Hola, Miguel! Confirmo mi asistencia a la boda. Muchas gracias por la invitación.");
-    window.open(`https://wa.me/525511111111?text=${mensaje}`, "_blank");
+    window.open(`https://wa.me/525630384749?text=${mensaje}`, "_blank");
 });
