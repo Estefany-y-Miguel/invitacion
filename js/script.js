@@ -1,4 +1,4 @@
-
+/* 
 
 document.addEventListener("DOMContentLoaded", function() {
     let music = document.getElementById("music");
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
             this.innerHTML = "▶"; // Cambia el ícono a play
         }
     });
-});
+}); */
 
 
 
@@ -45,6 +45,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
  */
+
+
+window.addEventListener("scroll", function() {
+    let music = document.getElementById("music");
+    
+    if (music.paused) {
+        music.play().catch(error => {
+            console.log("La reproducción automática fue bloqueada por el navegador.");
+        });
+    }
+});
 
 /* contador */
 
