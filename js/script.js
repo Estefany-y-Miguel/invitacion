@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 
 
-window.addEventListener("scroll", function() {
+/* window.addEventListener("scroll", function() {
     let music = document.getElementById("music");
     
     if (music.paused) {
@@ -56,6 +56,26 @@ window.addEventListener("scroll", function() {
         });
     }
 });
+ */
+
+const audio = document.getElementById('music');
+    let haReproducido = false;
+
+    function reproducirAlScroll() {
+      if (!haReproducido) {
+        audio.play().catch(err => {
+          console.warn("No se pudo reproducir automáticamente:", err);
+        });
+        haReproducido = true;
+        // Una vez que ya se activó, quitamos el event listener
+        window.removeEventListener('scroll', reproducirAlScroll);
+      }
+    }
+
+    window.addEventListener('scroll', reproducirAlScroll);
+
+
+
 
 /* contador */
 
