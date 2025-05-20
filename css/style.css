@@ -298,6 +298,7 @@ margin-bottom: 30px;
 }
 
 .fotos-circulares {
+    display: block;
     display: flex;
     justify-content: center;
     gap: 20px; /* Espaciado entre los círculos */
@@ -325,6 +326,7 @@ margin-bottom: 30px;
     margin-top: 5px;
     color: var(--color-nombres);
 }
+
 
 
 /* sección REGALOS */

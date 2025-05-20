@@ -1,4 +1,40 @@
-document.getElementById("playButton").addEventListener("click", function() {
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let music = document.getElementById("music");
+    let playButton = document.getElementById("playButton");
+
+    // Intentar reproducir automáticamente
+    let playPromise = music.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.log("Reproducción automática bloqueada, esperando interacción.");
+        });
+    }
+
+    // Reproducir música al primer clic en la página
+    document.addEventListener("click", function() {
+        if (music.paused) {
+            music.play();
+        }
+    });
+
+    // Control manual de reproducción
+    playButton.addEventListener("click", function() {
+        if (music.paused) {
+            music.play();
+            this.innerHTML = "⏸"; // Cambia el ícono a pausa
+        } else {
+            music.pause();
+            this.innerHTML = "▶"; // Cambia el ícono a play
+        }
+    });
+});
+
+
+
+/* document.getElementById("playButton").addEventListener("click", function() {
     let music = document.getElementById("music");
     if (music.paused) {
         music.play();
@@ -8,7 +44,7 @@ document.getElementById("playButton").addEventListener("click", function() {
         this.innerHTML = "▶"; // Cambia el ícono a play
     }
 });
-
+ */
 
 /* contador */
 
