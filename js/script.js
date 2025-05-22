@@ -203,9 +203,27 @@ document.getElementById("confirmar-miguel").addEventListener("click", () => {
 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-item');
+let autoPlayInterval;
 
 function changeSlide(direction) {
     slides[currentSlide].classList.remove('active');
     currentSlide = (currentSlide + direction + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
+    resetAutoPlay(); // Reinicia la reproducción automática cuando el usuario interactúa
 }
+
+function autoPlay() {
+    autoPlayInterval = setInterval(() => {
+        changeSlide(1); // Avanza automáticamente cada 3 segundos
+    }, 3000);
+}
+
+function resetAutoPlay() {
+    clearInterval(autoPlayInterval); // Detiene el autoplay cuando el usuario usa los botones
+    autoPlay(); // Reinicia el autoplay
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    slides[currentSlide].classList.add('active'); // Activa la primera imagen
+    autoPlay(); // Inicia la reproducción automática
+});
