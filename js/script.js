@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
  */
 
-    document.addEventListener("DOMContentLoaded", function() {
+   /*  document.addEventListener("DOMContentLoaded", function() {
     let music = document.getElementById("music");
     
     let observer = new IntersectionObserver((entries) => {
@@ -92,7 +92,23 @@ document.addEventListener("DOMContentLoaded", function() {
     // Observamos el cuerpo de la página o una sección específica
     observer.observe(document.querySelector("body"));
 });
+ */
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let music = document.getElementById("music");
+    let reproduccionIniciada = false;
+
+    window.addEventListener("scroll", function() {
+        if (!reproduccionIniciada && music.paused) {
+            music.play().catch(error => {
+                console.log("La reproducción automática fue bloqueada por el navegador.");
+            });
+            reproduccionIniciada = true; // Evita que se active múltiples veces
+        }
+    });
+});
 
 /* contador */
 
@@ -180,3 +196,16 @@ document.getElementById("confirmar-miguel").addEventListener("click", () => {
     const mensaje = encodeURIComponent("¡Hola, Miguel! Confirmo mi asistencia a la boda. Muchas gracias por la invitación.");
     window.open(`https://wa.me/525630384749?text=${mensaje}`, "_blank");
 });
+
+
+/* carrusel fotos novios */
+
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-item');
+
+function changeSlide(direction) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}

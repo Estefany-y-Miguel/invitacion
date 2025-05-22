@@ -537,3 +537,42 @@ margin-bottom: 30px;
     margin-bottom: 55px;
 }
 
+/* carrusel fotos novios */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev { 
+    left: 10px; /* Ajusta la posición del botón izquierdo */
+}
+
+.next { 
+    right: 10px; /* Ajusta la posición del botón derecho */
+}
