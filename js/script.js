@@ -1,136 +1,14 @@
-/* 
 
-document.addEventListener("DOMContentLoaded", function() {
-    let music = document.getElementById("music");
-    let playButton = document.getElementById("playButton");
-
-    // Intentar reproducir automáticamente
-    let playPromise = music.play();
-
-    if (playPromise !== undefined) {
-        playPromise.catch(error => {
-            console.log("Reproducción automática bloqueada, esperando interacción.");
-        });
-    }
-
-    // Reproducir música al primer clic en la página
-    document.addEventListener("click", function() {
-        if (music.paused) {
-            music.play();
-        }
-    });
-
-    // Control manual de reproducción
-    playButton.addEventListener("click", function() {
-        if (music.paused) {
-            music.play();
-            this.innerHTML = "⏸"; // Cambia el ícono a pausa
-        } else {
-            music.pause();
-            this.innerHTML = "▶"; // Cambia el ícono a play
-        }
-    });
-}); */
+window.addEventListener('load', () => {
+  const music = document.getElementById('music');
+  music.play().catch(err => {
+    console.warn("El navegador bloqueó la reproducción automática:", err);
+  });
+}); 
+ 
 
 
 
-/* document.getElementById("playButton").addEventListener("click", function() {
-    let music = document.getElementById("music");
-    if (music.paused) {
-        music.play();
-        this.innerHTML = "⏸"; // Cambia el ícono a pausa
-    } else {
-        music.pause();
-        this.innerHTML = "▶"; // Cambia el ícono a play
-    }
-});
- */
-
-
-/* window.addEventListener("scroll", function() {
-    let music = document.getElementById("music");
-    
-    if (music.paused) {
-        music.play().catch(error => {
-            console.log("La reproducción automática fue bloqueada por el navegador.");
-        });
-    }
-});
- */
-
-/* const audio = document.getElementById('music');
-    let haReproducido = false;
-
-    function reproducirAlScroll() {
-      if (!haReproducido) {
-        audio.play().catch(err => {
-          console.warn("No se pudo reproducir automáticamente:", err);
-        });
-        haReproducido = true;
-        // Una vez que ya se activó, quitamos el event listener
-        window.removeEventListener('scroll', reproducirAlScroll);
-      }
-    }
-
-    window.addEventListener('scroll', reproducirAlScroll);
-
- */
-
-   /*  document.addEventListener("DOMContentLoaded", function() {
-    let music = document.getElementById("music");
-    
-    let observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && music.paused) {
-                music.play().catch(error => {
-                    console.log("La reproducción automática fue bloqueada por el navegador.");
-                });
-            }
-        });
-    });
-
-    // Observamos el cuerpo de la página o una sección específica
-    observer.observe(document.querySelector("body"));
-});
- */
-
-
-
-/* document.addEventListener("DOMContentLoaded", function() {
-    let music = document.getElementById("music");
-    let reproduccionIniciada = false;
-
-    window.addEventListener("scroll", function() {
-        if (!reproduccionIniciada && music.paused) {
-            music.play().catch(error => {
-                console.log("La reproducción automática fue bloqueada por el navegador.");
-            });
-            reproduccionIniciada = true; // Evita que se active múltiples veces
-        }
-    });
-});
- */
-
-/* document.addEventListener("DOMContentLoaded", () => {
-    const audio = document.getElementById("audio");
-    audio.play().catch(error => console.log("El navegador bloqueó el autoplay:", error));
-});
-
- */
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const audio = document.getElementById("audio");
-
-    function playAudio() {
-        audio.play().catch(error => console.log("El navegador bloqueó el autoplay:", error));
-        document.removeEventListener("click", playAudio);
-        document.removeEventListener("mousemove", playAudio);
-    }
-
-    document.addEventListener("click", playAudio);
-    document.addEventListener("mousemove", playAudio);
-});
 
 
 
@@ -252,3 +130,4 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[currentSlide].classList.add('active'); // Activa la primera imagen
     autoPlay(); // Inicia la reproducción automática
 });
+  
