@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+/* document.addEventListener("DOMContentLoaded", function() {
     let music = document.getElementById("music");
     let reproduccionIniciada = false;
 
@@ -109,6 +109,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audio");
+    audio.play().catch(error => console.log("El navegador bloqueó el autoplay:", error));
+});
+
+
+
+
+
 
 /* contador */
 
