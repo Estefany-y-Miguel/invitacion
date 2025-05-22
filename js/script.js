@@ -111,12 +111,26 @@ document.addEventListener("DOMContentLoaded", function() {
 });
  */
 
-document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("audio");
     audio.play().catch(error => console.log("El navegador bloqueó el autoplay:", error));
 });
 
+ */
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audio");
+
+    function playAudio() {
+        audio.play().catch(error => console.log("El navegador bloqueó el autoplay:", error));
+        document.removeEventListener("click", playAudio);
+        document.removeEventListener("mousemove", playAudio);
+    }
+
+    document.addEventListener("click", playAudio);
+    document.addEventListener("mousemove", playAudio);
+});
 
 
 
