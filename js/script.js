@@ -1,10 +1,22 @@
 
-window.addEventListener('load', () => {
-  const music = document.getElementById('music');
-  music.play().catch(err => {
-    console.warn("El navegador bloqueó la reproducción automática:", err);
-  });
-}); 
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("music");
+  let musicStarted = false;
+
+  function startMusic() {
+    if (!musicStarted) {
+      music.play().catch(err => {
+        console.log("Bloqueado por navegador:", err);
+      });
+      musicStarted = true;
+    }
+  }
+
+  // Escucha la primera interacción
+  document.body.addEventListener("click", startMusic, { once: true });
+  window.addEventListener("scroll", startMusic, { once: true });
+});
+
  
 
 
