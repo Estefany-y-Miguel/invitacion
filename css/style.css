@@ -576,3 +576,19 @@ margin-bottom: 30px;
 .next { 
     right: 10px; /* Ajusta la posición del botón derecho */
 }
+
+
+
+
+/* desktop carrusel */
+
+
+@media screen and (min-width: 1024px) { /* Ajusta el tamaño según necesites */
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px; /* Ajusta el tamaño del carrusel */
+        margin: 0 auto; /* Centra horizontalmente */
+    }
+}

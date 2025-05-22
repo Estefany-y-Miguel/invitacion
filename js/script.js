@@ -1,23 +1,31 @@
 
-
 const music = document.getElementById('music');
 const playButton = document.getElementById('playButton');
+
+// Función para actualizar el icono del botón
+const updateButtonIcon = () => {
+  playButton.textContent = music.paused ? '▶' : '⏸';
+};
 
 playButton.addEventListener('click', () => {
   if (music.paused) {
     music.play().catch(err => {
       console.log("Error al reproducir:", err);
     });
-    playButton.textContent = '⏸'; // Cambia a pausa
   } else {
     music.pause();
-    playButton.textContent = '▶'; // Cambia a play
   }
+  updateButtonIcon(); // Actualiza el icono cada vez que se hace clic
+});
+
+// Actualiza el ícono cuando termina la música
+music.addEventListener('ended', () => {
+  playButton.textContent = '▶';
 });
 
 
 
-
+ 
 
 
 
