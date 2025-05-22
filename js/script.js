@@ -1,23 +1,19 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-  const music = document.getElementById("music");
-  let musicStarted = false;
 
-  function startMusic() {
-    if (!musicStarted) {
-      music.play().catch(err => {
-        console.log("Bloqueado por navegador:", err);
-      });
-      musicStarted = true;
-    }
+const music = document.getElementById('music');
+const playButton = document.getElementById('playButton');
+
+playButton.addEventListener('click', () => {
+  if (music.paused) {
+    music.play().catch(err => {
+      console.log("Error al reproducir:", err);
+    });
+    playButton.textContent = '⏸'; // Cambia a pausa
+  } else {
+    music.pause();
+    playButton.textContent = '▶'; // Cambia a play
   }
-
-  // Escucha la primera interacción
-  document.body.addEventListener("click", startMusic, { once: true });
-  window.addEventListener("scroll", startMusic, { once: true });
 });
-
- 
 
 
 
